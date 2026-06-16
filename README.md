@@ -119,6 +119,18 @@ The final system will provide investigators with a data-driven platform capable 
 
 ---
 
+The core machine learning objective of MayDay is not to search for similar accidents. The Similar Accident Finder is a supporting system feature.
+
+The primary machine learning task is to predict Investigation Duration for aviation accident investigations using historical accident characteristics such as aircraft type, weather conditions, flight phase, and operational factors.
+
+The regression model learns relationships between accident characteristics and investigation duration, while the time-series model forecasts investigation duration trends over time.
+
+The Similar Accident Finder complements the prediction by retrieving historical investigations with similar characteristics, allowing investigators to understand why a particular duration was predicted and learn from previous investigation outcomes.
+
+Therefore, machine learning is central to the project, while the Similar Accident Finder serves as an intelligent decision-support component.
+
+---
+
 ## Project Domain
 
 **Aviation Safety and Accident Investigation**
