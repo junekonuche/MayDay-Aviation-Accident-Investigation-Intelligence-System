@@ -38,6 +38,7 @@ The dataset contains detailed records of U.S. civil aviation accidents and incid
 
 The dataset has been converted into structured CSV tables linked through a common event identifier, enabling relational analysis across multiple investigation components.
 
+
 ## Key Tables
 
 * Events
@@ -64,6 +65,7 @@ Build an investigation support platform for aviation safety professionals.
 Improve access to historical investigation knowledge and safety lessons.
 Machine Learning Component
 Regression Problem
+
 
 
 ## Target Variable: Accident Similarity Score
@@ -101,7 +103,7 @@ The forecasts will help identify emerging aviation safety patterns and support p
 
 Searches historical aviation accident records and identifies accidents with characteristics similar to the current case.
 
-# Role:
+Role:
 Supports investigators by rapidly locating relevant historical cases and lessons learned.
 
 
@@ -109,7 +111,7 @@ Supports investigators by rapidly locating relevant historical cases and lessons
 
 Provides access to accident findings, probable causes, safety recommendations, and investigation summaries.
 
-# Role:
+Role:
 Acts as a centralized aviation investigation knowledge repository.
 
 
@@ -121,7 +123,7 @@ Flight Data Recorder (FDR) findings
 Cockpit Voice Recorder (CVR) findings
 Air Traffic Control (ATC) communications
 
-# Role:
+Role:
 Helps investigators understand evidence sources associated with historical accident cases.
 
 
@@ -129,7 +131,7 @@ Helps investigators understand evidence sources associated with historical accid
 
 Visualizes aviation accident patterns and forecasted safety trends.
 
-# Role:
+Role:
 Supports safety monitoring and data-driven decision-making.
 
 
@@ -139,7 +141,8 @@ Improved retrieval of aviation investigation knowledge.
 Faster identification of similar historical accidents.
 Better understanding of recurring aviation safety issues.
 Enhanced support for aviation accident investigations.
-Data-driven insights into future aviation safety trends.  
+Data-driven insights into future aviation safety trends. 
+
 
 
 ### Technologies
@@ -147,10 +150,11 @@ Python
 Pandas
 NumPy
 Scikit-Learn
-Tableau / Power BI
+Tableau 
 SQL
 Jupyter Notebook
-Git & GitHub
+GitHub
+
 
 ### Data Methodology
 
