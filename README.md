@@ -198,4 +198,6 @@ The final system will provide:
 ### Vision
 
 MayDay seeks to transform historical aviation accident data into actionable investigation intelligence by helping investigators learn from past accidents, discover hidden patterns, and support safer skies through data-driven decision-making.
-Data Science Capstone Project
+
+
+## Data Science Capstone Project
