@@ -22,6 +22,31 @@ There is a need for an intelligent system that can automatically identify simila
 
 To develop an Aviation Investigation Intelligence System that uses machine learning and historical aviation accident data to identify similar accident cases, provide investigation knowledge, and forecast aviation safety trends.
 
+### Data Source
+
+National Transportation Safety Board (NTSB)
+
+This project uses aviation accident and incident data obtained from the National Transportation Safety Board (NTSB) Aviation Accident Database.
+
+The dataset contains detailed records of U.S. civil aviation accidents and incidents from 1982 to the present and includes information on accident events, aircraft characteristics, weather conditions, investigation findings, probable causes, flight operations, injuries, and accident narratives.
+
+The dataset has been converted into structured CSV tables linked through a common event identifier, enabling relational analysis across multiple investigation components.
+
+## Key Tables
+
+* Events
+* Aircraft
+* Findings
+* Narratives
+* Flight Crew
+* Injuries
+* Occurrences
+* Engines
+
+Dataset Link:
+https://www.kaggle.com/datasets/mirzaniazmorshed/ntsb-aviation-accidents/data
+
+
 ### Objectives
 Analyze historical aviation accident and incident data.
 Identify patterns and relationships between aviation accidents.
@@ -109,15 +134,65 @@ Tableau / Power BI
 SQL
 Jupyter Notebook
 Git & GitHub
-Data Science Workflow
-Data Collection
-Data Cleaning and Preparation
-Exploratory Data Analysis (EDA)
-Feature Engineering
-Regression Modeling
-Time Series Forecasting
-System Development
-Visualization and Reporting
+
+### Data Methodology
+
+## 1. Data Collection
+
+Aviation accident and incident data will be collected from the NTSB Aviation Accident Database and integrated from multiple relational tables, including events, aircraft, findings, narratives, injuries, and occurrence records.
+
+## 2. Data Cleaning
+
+* Handle missing values
+* Remove duplicate records
+* Standardize aircraft and location information
+* Convert date fields into consistent formats
+* Validate relationships between tables
+
+## 3. Data Integration
+
+Relevant tables will be merged using the Event ID (EV_ID) as the primary key to create a unified investigation dataset.
+
+## 4. Exploratory Data Analysis (EDA)
+
+The project will analyze:
+
+* Aircraft types involved in accidents
+* Weather conditions
+* Flight phases
+* Accident locations
+* Investigation findings
+* Probable causes
+* Accident trends over time
+
+## 5. Feature Engineering
+
+Features will be derived from:
+
+* Aircraft characteristics
+* Weather observations
+* Flight operation details
+* Investigation findings
+* Narrative reports
+* Accident categories
+
+## 6. Machine Learning
+
+A regression model will be developed to estimate Accident Similarity Scores based on accident characteristics and investigation data.
+
+## 7. Time Series Forecasting
+
+Time series models will be used to forecast trends in aviation accident categories and recurring safety issues over time.
+
+## 8. System Development
+
+The final system will provide:
+
+* Similar Accident Finder
+* Investigation Knowledge Hub
+* FDR, CVR and ATC Evidence Explorer
+* Aviation Safety Trend Dashboard
+
 
 
 ### Vision
