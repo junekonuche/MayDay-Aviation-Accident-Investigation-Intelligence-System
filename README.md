@@ -1,145 +1,126 @@
-# MayDay-Aviation-Accident-Investigation-Support-System
-A data science project that supports aviation accident investigations through machine learning, time-series forecasting, and historical accident similarity analysis.
+# MayDay-Aviation-Accident-Investigation-Intelligence-System
+An aviation investigation intelligence system that uses machine learning and historical accident data to identify similar accident cases, retrieve investigation knowledge, and forecast aviation safety trends.
 
 
-## Overview
+### Project Overview
 
-MayDay is a data science capstone project that supports aviation accident investigations through machine learning, historical accident analysis, and intelligent investigation assistance.
+MayDay: Aviation Investigation Intelligence System is a data science and machine learning project designed to support aviation accident investigations through intelligent analysis of historical accident data.
 
-Aviation accident investigators often spend significant time reviewing historical reports, aircraft records, weather information, and investigative findings to identify relevant evidence and comparable accident cases. MayDay aims to streamline this process by providing a platform that can identify similar historical accidents, estimate investigation duration, and provide investigation-related insights from previous cases.
+The project addresses a key challenge in aviation safety: investigators often need to review thousands of historical accident reports, findings, and safety recommendations to identify relevant cases and lessons learned. This process can be time-consuming and may result in important information being overlooked.
 
-The project combines data analytics, machine learning, time-series forecasting, and interactive system development to assist investigators in accessing and utilizing historical investigation knowledge more efficiently.
+MayDay aims to provide an intelligent investigation support platform that helps users discover similar historical accidents, access investigation knowledge, and identify emerging aviation safety trends using machine learning and time series forecasting techniques.
 
----
+### Problem Statement
 
-## Problem Statement
+Aviation investigators and safety analysts frequently face difficulties in quickly identifying historical accidents with similar characteristics to an ongoing investigation.
 
-Aviation accident investigations require extensive analysis of historical accident records, operational data, weather conditions, aircraft information, and investigative findings. Locating relevant historical cases and understanding comparable investigation outcomes can be a time-consuming process.
+Accident information is often distributed across multiple reports, findings, recommendations, aircraft records, and operational data sources. As a result, retrieving relevant knowledge can take significant time and effort.
 
-MayDay addresses this challenge by providing an intelligent investigation support system that helps investigators identify similar accident cases, estimate investigation duration, and access relevant investigation knowledge from historical records.
+There is a need for an intelligent system that can automatically identify similar accidents, provide investigation insights, and support evidence-based decision-making during aviation accident investigations.
 
----
+### Project Goal
 
-## Project Goal
+To develop an Aviation Investigation Intelligence System that uses machine learning and historical aviation accident data to identify similar accident cases, provide investigation knowledge, and forecast aviation safety trends.
 
-To develop an intelligent aviation accident investigation support system that assists investigators through historical accident similarity analysis, investigation duration prediction, and investigation trend forecasting.
+### Objectives
+Analyze historical aviation accident and incident data.
+Identify patterns and relationships between aviation accidents.
+Develop a machine learning model to predict Accident Similarity Scores.
+Forecast aviation accident category trends using time series analysis.
+Build an investigation support platform for aviation safety professionals.
+Improve access to historical investigation knowledge and safety lessons.
+Machine Learning Component
+Regression Problem
 
----
+## Target Variable: Accident Similarity Score
 
-## Research Question
+The model will estimate the similarity between aviation accidents based on factors such as:
 
-How can historical aviation accident investigation data be leveraged to support investigators in identifying similar accident cases and improving investigation efficiency?
+Aircraft type
+Aircraft manufacturer
+Weather conditions
+Flight phase
+Operational characteristics
+Accident circumstances
 
----
-
-## Machine Learning Component
-
-### Regression Task
-
-**Target Variable:** Investigation Duration (Days)
-
-The regression model predicts the expected duration of an aviation accident investigation based on accident characteristics, aircraft information, environmental conditions, and operational factors.
-
----
+The output will be a numerical similarity score indicating how closely related two accident cases are.
 
 ## Time Series Component
+Accident Trend Forecasting
 
-**Target Variable:** Investigation Duration (Days)
+The project will forecast future trends in aviation accident categories, including:
 
-The forecasting model analyzes historical investigation durations and predicts future investigation duration trends over time.
+Runway excursions
+Loss of control events
+Engine-related occurrences
+Weather-related accidents
+Operational incidents
 
----
+The forecasts will help identify emerging aviation safety patterns and support proactive safety planning.
 
-## Core System Feature
+## Core Functionalities
+Similar Accident Finder
 
-### Similar Accident Finder
+Searches historical aviation accident records and identifies accidents with characteristics similar to the current case.
 
-The Similar Accident Finder is the primary feature of MayDay.
+# Role:
+Supports investigators by rapidly locating relevant historical cases and lessons learned.
 
-Given accident characteristics such as aircraft type, weather conditions, flight phase, and operational information, the system identifies historical accident investigations with similar profiles and provides:
+Investigation Knowledge Hub
 
-* Investigation duration
-* Investigation findings
-* Contributing factors
-* Weather information
-* Relevant investigation insights
+Provides access to accident findings, probable causes, safety recommendations, and investigation summaries.
 
-This enables investigators to learn from previous investigations and access relevant historical knowledge more efficiently.
+3 Role:
+Acts as a centralized aviation investigation knowledge repository.
 
----
+FDR, CVR, and ATC Evidence Explorer
 
-## Investigation Support Information
+Organizes investigation information related to:
 
-For each identified accident case, the system provides investigation-related information including:
+Flight Data Recorder (FDR) findings
+Cockpit Voice Recorder (CVR) findings
+Air Traffic Control (ATC) communications
 
-### Flight Data Recorder (FDR)
 
-Information derived from flight data analysis and recorded flight parameters.
+# Role:
+Helps investigators understand evidence sources associated with historical accident cases.
 
-### Cockpit Voice Recorder (CVR)
+Aviation Safety Trend Dashboard
 
-Investigation insights related to cockpit communications and crew actions.
+Visualizes aviation accident patterns and forecasted safety trends.
 
-### Air Traffic Control (ATC)
+# Role:
+Supports safety monitoring and data-driven decision-making.
 
-Relevant ATC communications and operational context.
+### Expected Outcomes
+Improved retrieval of aviation investigation knowledge.
+Faster identification of similar historical accidents.
+Better understanding of recurring aviation safety issues.
+Enhanced support for aviation accident investigations.
+Data-driven insights into future aviation safety trends.  
 
-### Weather Information
 
-Meteorological conditions associated with the accident and their investigative significance.
+### Technologies
+Python
+Pandas
+NumPy
+Scikit-Learn
+Tableau / Power BI
+SQL
+Jupyter Notebook
+Git & GitHub
+Data Science Workflow
+Data Collection
+Data Cleaning and Preparation
+Exploratory Data Analysis (EDA)
+Feature Engineering
+Regression Modeling
+Time Series Forecasting
+System Development
+Visualization and Reporting
 
----
 
-## Technologies
+### Vision
 
-* Python
-* Pandas
-* NumPy
-* SQL
-* Tableau
-* Scikit-Learn
-* XGBoost
-* Streamlit
-* Plotly
-* ARIMA
-* Prophet
-
----
-
-## Expected Outcome
-
-The final system will provide investigators with a data-driven platform capable of:
-
-* Finding similar historical accident investigations
-* Predicting investigation duration
-* Forecasting investigation duration trends
-* Supporting investigation decision-making through historical insights
-* Improving access to aviation investigation knowledge
-
----
-
-The core machine learning objective of MayDay is not to search for similar accidents. The Similar Accident Finder is a supporting system feature.
-
-The primary machine learning task is to predict Investigation Duration for aviation accident investigations using historical accident characteristics such as aircraft type, weather conditions, flight phase, and operational factors.
-
-The regression model learns relationships between accident characteristics and investigation duration, while the time-series model forecasts investigation duration trends over time.
-
-The Similar Accident Finder complements the prediction by retrieving historical investigations with similar characteristics, allowing investigators to understand why a particular duration was predicted and learn from previous investigation outcomes.
-
-Therefore, machine learning is central to the project, while the Similar Accident Finder serves as an intelligent decision-support component.
-
----
-
-## Project Domain
-
-**Aviation Safety and Accident Investigation**
-
----
-
-## Author
-
-June Konnuche
-
-BSc Mathematics and Computer Science – Data Science Capstone Project
-
+MayDay seeks to transform historical aviation accident data into actionable investigation intelligence by helping investigators learn from past accidents, discover hidden patterns, and support safer skies through data-driven decision-making.
 Data Science Capstone Project
