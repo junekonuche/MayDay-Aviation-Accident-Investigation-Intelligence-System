@@ -10,6 +10,8 @@ The project addresses a key challenge in aviation safety: investigators often ne
 
 MayDay aims to provide an intelligent investigation support platform that helps users discover similar historical accidents, access investigation knowledge, and identify emerging aviation safety trends using machine learning and time series forecasting techniques.
 
+
+
 ### Problem Statement
 
 Aviation investigators and safety analysts frequently face difficulties in quickly identifying historical accidents with similar characteristics to an ongoing investigation.
@@ -18,9 +20,13 @@ Accident information is often distributed across multiple reports, findings, rec
 
 There is a need for an intelligent system that can automatically identify similar accidents, provide investigation insights, and support evidence-based decision-making during aviation accident investigations.
 
+
+
 ### Project Goal
 
 To develop an Aviation Investigation Intelligence System that uses machine learning and historical aviation accident data to identify similar accident cases, provide investigation knowledge, and forecast aviation safety trends.
+
+
 
 ### Data Source
 
@@ -47,6 +53,8 @@ Dataset Link:
 https://www.kaggle.com/datasets/mirzaniazmorshed/ntsb-aviation-accidents/data
 
 
+
+
 ### Objectives
 Analyze historical aviation accident and incident data.
 Identify patterns and relationships between aviation accidents.
@@ -56,6 +64,7 @@ Build an investigation support platform for aviation safety professionals.
 Improve access to historical investigation knowledge and safety lessons.
 Machine Learning Component
 Regression Problem
+
 
 ## Target Variable: Accident Similarity Score
 
@@ -70,6 +79,7 @@ Accident circumstances
 
 The output will be a numerical similarity score indicating how closely related two accident cases are.
 
+
 ## Time Series Component
 Accident Trend Forecasting
 
@@ -83,22 +93,27 @@ Operational incidents
 
 The forecasts will help identify emerging aviation safety patterns and support proactive safety planning.
 
-## Core Functionalities
-Similar Accident Finder
+
+
+### Core Functionalities
+
+## Similar Accident Finder
 
 Searches historical aviation accident records and identifies accidents with characteristics similar to the current case.
 
 # Role:
 Supports investigators by rapidly locating relevant historical cases and lessons learned.
 
-Investigation Knowledge Hub
+
+## Investigation Knowledge Hub
 
 Provides access to accident findings, probable causes, safety recommendations, and investigation summaries.
 
-3 Role:
+# Role:
 Acts as a centralized aviation investigation knowledge repository.
 
-FDR, CVR, and ATC Evidence Explorer
+
+## FDR, CVR, and ATC Evidence Explorer
 
 Organizes investigation information related to:
 
@@ -106,16 +121,18 @@ Flight Data Recorder (FDR) findings
 Cockpit Voice Recorder (CVR) findings
 Air Traffic Control (ATC) communications
 
-
 # Role:
 Helps investigators understand evidence sources associated with historical accident cases.
 
-Aviation Safety Trend Dashboard
+
+## Aviation Safety Trend Dashboard
 
 Visualizes aviation accident patterns and forecasted safety trends.
 
 # Role:
 Supports safety monitoring and data-driven decision-making.
+
+
 
 ### Expected Outcomes
 Improved retrieval of aviation investigation knowledge.
