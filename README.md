@@ -97,6 +97,7 @@ The forecasts will help identify emerging aviation safety patterns and support p
 
 
 
+
 ### Core Functionalities
 
 ## Similar Accident Finder
@@ -133,6 +134,8 @@ Visualizes aviation accident patterns and forecasted safety trends.
 
 Role:
 Supports safety monitoring and data-driven decision-making.
+
+
 
 
 
@@ -191,6 +194,8 @@ Historical Accident Records
 ```
 
 This component supports proactive aviation safety analysis by forecasting future accident patterns and trends.
+
+
 
 
 
