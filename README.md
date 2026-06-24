@@ -136,6 +136,65 @@ Supports safety monitoring and data-driven decision-making.
 
 
 
+### Project Framework
+
+The MayDay Aviation Investigation Intelligence System consists of three main analytical components:
+
+## 1. Accident Similarity Analysis
+
+Historical accident narratives, findings, and causes are processed using Natural Language Processing (NLP) techniques.
+
+```text
+Accident Narratives + Findings + Causes
+                    ↓
+                 TF-IDF
+                    ↓
+            Cosine Similarity
+                    ↓
+       Accident Similarity Score
+```
+
+This component identifies historical accidents that are most similar to a selected accident case and generates an Accident Similarity Score.
+
+---
+
+## 2. Regression Modeling
+
+Structured aviation features are used to predict the Accident Similarity Score.
+
+```text
+Aircraft Information
+Weather Conditions
+Flight Characteristics
+Engine Information
+Accident Information
+            ↓
+     Regression Models
+            ↓
+Predict Accident Similarity Score
+```
+
+The objective is to determine which aviation factors contribute most to accidents that resemble previous historical accident cases.
+
+---
+
+## 3. Time Series Forecasting
+
+Historical accident records are analyzed over time to identify long-term aviation safety trends.
+
+```text
+Historical Accident Records
+             ↓
+      Time Series Models
+             ↓
+ Future Aviation Safety Trends
+```
+
+This component supports proactive aviation safety analysis by forecasting future accident patterns and trends.
+
+
+
+
 ### Expected Outcomes
 Improved retrieval of aviation investigation knowledge.
 Faster identification of similar historical accidents.
