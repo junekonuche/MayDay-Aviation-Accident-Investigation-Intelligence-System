@@ -148,53 +148,37 @@ Supports safety monitoring and data-driven decision-making.
 
 ### Project Framework
 
-Historical Aviation Accident Data
-                 │
-                 ▼
-────────────────────────────────────────
-Data Cleaning & Integration
-────────────────────────────────────────
-                 │
-                 ▼
-Exploratory Data Analysis (EDA)
-                 │
-                 ▼
-Feature Engineering
-                 │
-────────────────────────────────────────
-Natural Language Processing
-────────────────────────────────────────
-                 │
-        ┌────────┴────────┐
-        │                 │
-     TF-IDF          Sentence-BERT
-   (Baseline)      (Semantic Embeddings)
-        │                 │
-        └────────┬────────┘
-                 ▼
-          Cosine Similarity
-                 │
-                 ▼
-     Accident Similarity Score
-                 │
-────────────────────────────────────────
-Machine Learning
-────────────────────────────────────────
-                 │
-                 ▼
-Regression Models
-(Random Forest, XGBoost, Gradient Boosting)
-                 │
-                 ▼
-Predicted Accident Similarity Score
-                 │
-────────────────────────────────────────
-Forecasting
-────────────────────────────────────────
-                 │
-                 ▼
-Future Aviation Safety Trends
+```mermaid
+flowchart TD
 
+A[Historical Aviation Accident Data]
+
+A --> B[Data Cleaning & Integration]
+
+B --> C[Exploratory Data Analysis]
+
+C --> D[Feature Engineering]
+
+D --> E[Natural Language Processing]
+
+E --> F[TF-IDF]
+
+E --> G[Sentence-BERT]
+
+F --> H[Cosine Similarity]
+
+G --> H
+
+H --> I[Accident Similarity Score]
+
+I --> J[Regression Models]
+
+J --> K[Predicted Similarity Score]
+
+K --> L[Time Series Forecasting]
+
+L --> M[Future Aviation Safety Trends]
+```
 
 
 
