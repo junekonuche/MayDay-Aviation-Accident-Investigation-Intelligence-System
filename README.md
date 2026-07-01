@@ -14,11 +14,7 @@ MayDay aims to provide an intelligent investigation support platform that helps 
 
 ### Problem Statement
 
-Aviation investigators and safety analysts frequently face difficulties in quickly identifying historical accidents with similar characteristics to an ongoing investigation.
-
-Accident information is often distributed across multiple reports, findings, recommendations, aircraft records, and operational data sources. As a result, retrieving relevant knowledge can take significant time and effort.
-
-There is a need for an intelligent system that can automatically identify similar accidents, provide investigation insights, and support evidence-based decision-making during aviation accident investigations.
+Mayday: Aviation Investigation Intelligence System is an AI-powered aviation safety analytics platform that helps investigators identify semantically similar aviation accidents, predict accident similarity scores using machine learning, and forecast aviation safety trends. The system combines Natural Language Processing (Sentence-BERT and TF-IDF), regression modeling, and time series forecasting to support aviation accident investigation and safety decision-making.
 
 
 
