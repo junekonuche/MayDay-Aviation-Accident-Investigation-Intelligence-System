@@ -2,25 +2,31 @@
 An aviation investigation intelligence system that uses machine learning and historical accident data to identify similar accident cases, retrieve investigation knowledge, and forecast aviation safety trends.
 
 
+
 ### Project Overview
 
-MayDay: Aviation Investigation Intelligence System is a data science and machine learning project designed to support aviation accident investigations through intelligent analysis of historical accident data.
+MayDay: Aviation Accident Investigation Intelligence System is an AI-powered aviation safety analytics platform that combines Natural Language Processing (NLP), Machine Learning, and Time Series Forecasting to support aviation accident investigations.
 
-The project addresses a key challenge in aviation safety: investigators often need to review thousands of historical accident reports, findings, and safety recommendations to identify relevant cases and lessons learned. This process can be time-consuming and may result in important information being overlooked.
+The system assists investigators by analyzing historical aviation accident records to identify semantically similar accident cases, retrieve investigation knowledge, predict Accident Similarity Scores from structured aviation data, and forecast future aviation safety trends.
 
-MayDay aims to provide an intelligent investigation support platform that helps users discover similar historical accidents, access investigation knowledge, and identify emerging aviation safety trends using machine learning and time series forecasting techniques.
+By integrating historical accident narratives, investigation findings, aircraft information, weather conditions, and operational data, MayDay transforms aviation accident data into actionable investigation intelligence for improved safety decision-making.
+
 
 
 
 ### Problem Statement
 
-Mayday: Aviation Investigation Intelligence System is an AI-powered aviation safety analytics platform that helps investigators identify semantically similar aviation accidents, predict accident similarity scores using machine learning, and forecast aviation safety trends. The system combines Natural Language Processing (Sentence-BERT and TF-IDF), regression modeling, and time series forecasting to support aviation accident investigation and safety decision-making.
+Aviation investigators often analyze thousands of historical accident reports, investigation findings, and safety recommendations to determine whether a current accident resembles previous events. This manual process is time-consuming and may overlook valuable historical knowledge.
+
+MayDay addresses this challenge by leveraging Natural Language Processing (Sentence-BERT and TF-IDF), semantic similarity analysis, regression modeling, and time series forecasting to automatically identify similar accident cases, predict accident similarity scores, and discover long-term aviation safety trends.
+
 
 
 
 ### Project Goal
 
 To develop an Aviation Investigation Intelligence System that uses machine learning and historical aviation accident data to identify similar accident cases, provide investigation knowledge, and forecast aviation safety trends.
+
 
 
 
@@ -33,6 +39,8 @@ This project uses aviation accident and incident data obtained from the National
 The dataset contains detailed records of U.S. civil aviation accidents and incidents from 1982 to the present and includes information on accident events, aircraft characteristics, weather conditions, investigation findings, probable causes, flight operations, injuries, and accident narratives.
 
 The dataset has been converted into structured CSV tables linked through a common event identifier, enabling relational analysis across multiple investigation components.
+
+
 
 
 ## Key Tables
@@ -52,30 +60,34 @@ https://www.kaggle.com/datasets/mirzaniazmorshed/ntsb-aviation-accidents/data
 
 
 
+
 ### Objectives
-Analyze historical aviation accident and incident data.
-Identify patterns and relationships between aviation accidents.
-Develop a machine learning model to predict Accident Similarity Scores.
-Forecast aviation accident category trends using time series analysis.
-Build an investigation support platform for aviation safety professionals.
-Improve access to historical investigation knowledge and safety lessons.
-Machine Learning Component
-Regression Problem
+
+- Analyze historical aviation accident and incident data.
+- Discover patterns within aviation accident narratives and structured investigation records.
+- Compare TF-IDF and Sentence-BERT for semantic accident similarity analysis.
+- Generate Accident Similarity Scores using semantic embeddings and cosine similarity.
+- Develop regression models to predict Accident Similarity Scores.
+- Forecast aviation safety trends using time series analysis.
+- Build an intelligent investigation support platform for aviation safety professionals.
+
+
 
 
 
 ## Target Variable: Accident Similarity Score
 
-The model will estimate the similarity between aviation accidents based on factors such as:
+The Accident Similarity Score is a continuous numerical value representing how semantically similar one aviation accident is to previous historical accident cases.
 
-Aircraft type
-Aircraft manufacturer
-Weather conditions
-Flight phase
-Operational characteristics
-Accident circumstances
+The score is generated using:
 
-The output will be a numerical similarity score indicating how closely related two accident cases are.
+- Sentence-BERT embeddings
+- TF-IDF vectorization (baseline)
+- Cosine Similarity
+
+Regression models are then trained to predict this similarity score using structured aviation features such as aircraft characteristics, weather conditions, operational information, engine details, and accident circumstances.
+
+
 
 
 ## Time Series Component
@@ -134,63 +146,54 @@ Supports safety monitoring and data-driven decision-making.
 
 
 
-
 ### Project Framework
 
-The MayDay Aviation Investigation Intelligence System consists of three main analytical components:
-
-## 1. Accident Similarity Analysis
-
-Historical accident narratives, findings, and causes are processed using Natural Language Processing (NLP) techniques.
-
-```text
-Accident Narratives + Findings + Causes
-                    ↓
-                 TF-IDF
-                    ↓
-            Cosine Similarity
-                    ↓
-       Accident Similarity Score
-```
-
-This component identifies historical accidents that are most similar to a selected accident case and generates an Accident Similarity Score.
-
----
-
-## 2. Regression Modeling
-
-Structured aviation features are used to predict the Accident Similarity Score.
-
-```text
-Aircraft Information
-Weather Conditions
-Flight Characteristics
-Engine Information
-Accident Information
-            ↓
-     Regression Models
-            ↓
-Predict Accident Similarity Score
-```
-
-The objective is to determine which aviation factors contribute most to accidents that resemble previous historical accident cases.
-
----
-
-## 3. Time Series Forecasting
-
-Historical accident records are analyzed over time to identify long-term aviation safety trends.
-
-```text
-Historical Accident Records
-             ↓
-      Time Series Models
-             ↓
- Future Aviation Safety Trends
-```
-
-This component supports proactive aviation safety analysis by forecasting future accident patterns and trends.
-
+Historical Aviation Accident Data
+                 │
+                 ▼
+────────────────────────────────────────
+Data Cleaning & Integration
+────────────────────────────────────────
+                 │
+                 ▼
+Exploratory Data Analysis (EDA)
+                 │
+                 ▼
+Feature Engineering
+                 │
+────────────────────────────────────────
+Natural Language Processing
+────────────────────────────────────────
+                 │
+        ┌────────┴────────┐
+        │                 │
+     TF-IDF          Sentence-BERT
+   (Baseline)      (Semantic Embeddings)
+        │                 │
+        └────────┬────────┘
+                 ▼
+          Cosine Similarity
+                 │
+                 ▼
+     Accident Similarity Score
+                 │
+────────────────────────────────────────
+Machine Learning
+────────────────────────────────────────
+                 │
+                 ▼
+Regression Models
+(Random Forest, XGBoost, Gradient Boosting)
+                 │
+                 ▼
+Predicted Accident Similarity Score
+                 │
+────────────────────────────────────────
+Forecasting
+────────────────────────────────────────
+                 │
+                 ▼
+Future Aviation Safety Trends
 
 
 
@@ -205,15 +208,30 @@ Data-driven insights into future aviation safety trends.
 
 
 
+
 ### Technologies
-Python
-Pandas
-NumPy
-Scikit-Learn
-Tableau 
-SQL
-Jupyter Notebook
-GitHub
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Sentence-Transformers (Sentence-BERT)
+- TF-IDF Vectorizer
+- Cosine Similarity
+- XGBoost
+- Random Forest
+- Gradient Boosting
+- Time Series Forecasting
+- Matplotlib
+- Seaborn
+- Plotly
+- SQL
+- Tableau
+- Jupyter Notebook
+- GitHub
+
+
+
 
 
 ### Data Methodology
@@ -259,11 +277,20 @@ Features will be derived from:
 
 ## 6. Machine Learning
 
-A regression model will be developed to estimate Accident Similarity Scores based on accident characteristics and investigation data.
+The machine learning workflow consists of:
+
+- TF-IDF vectorization (baseline)
+- Sentence-BERT semantic embeddings
+- Cosine similarity computation
+- Accident Similarity Score generation
+- Regression modeling
+- Hyperparameter tuning and model comparison
+  
 
 ## 7. Time Series Forecasting
 
 Time series models will be used to forecast trends in aviation accident categories and recurring safety issues over time.
+
 
 ## 8. System Development
 
@@ -278,7 +305,7 @@ The final system will provide:
 
 ### Vision
 
-MayDay seeks to transform historical aviation accident data into actionable investigation intelligence by helping investigators learn from past accidents, discover hidden patterns, and support safer skies through data-driven decision-making.
+MayDay aims to become an intelligent aviation investigation platform that transforms historical accident data into actionable investigation intelligence. By combining semantic search, machine learning, and predictive analytics, the system enables investigators to rapidly discover similar accident cases, understand contributing factors, and support data-driven aviation safety decisions.
 
 
 ## Data Science Capstone Project
